@@ -1,0 +1,16 @@
+{
+  "name": "Old Reddit Redirector",
+  "description": "Redirects to the old reddit page when clicking on posts.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_icon": "icons/400-TackShooter.png"
+  },
+  "content_scripts":[
+    {
+    "matches": ["https://www.reddit.com/*"],
+    "include_globs": ["*reddit.com/r/*/comments/*"],
+    "js": ["scripts/content.js"]
+    }
+  ]
+}
